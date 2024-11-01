@@ -23,7 +23,7 @@ export default function Footer() {
           <Link href="/"><IoLogoInstagram className="fa-brands fa-instagram text-white hover:text-gray-400 text-3xl mx-5" /></Link>
           <Link href="/"><BsYoutube className="fa-brands fa-instagram text-white hover:text-gray-400 text-3xl mx-5" /></Link>
         </div>
-        <div className={`flex justify-center text-gray-400 text-xs mt-4 ${inter.className}`}>© 1997-2023 CineFlix, Inc.</div>
+        <div className={`flex justify-center text-gray-400 text-xs mt-4 ${inter.className}`}>© 2023 CineFlix, Inc.</div>
       </div>
     </div>
   )
