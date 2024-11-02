@@ -8,6 +8,7 @@ import { ListMovieParams, listMovies } from '@/services/cineflix-api-services';
 import { inter, ubuntu } from '../../public/fonts/fonts';
 import { FaStar } from 'react-icons/fa6';
 import ReactPaginate from 'react-paginate';
+import toast from 'react-hot-toast';
 
 interface MovieList {
     count : number,
@@ -45,6 +46,7 @@ export default function BrowseMovies() {
 
         } catch (error) {
             console.error("Error loading upcoming movies:", error);
+            toast.error("Error loading upcoming movies:");
 
         } finally {
             setLoading(false);

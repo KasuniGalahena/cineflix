@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import { listMovies, UpcomingMovies } from '@/services/cineflix-api-services';
 import { inter, ubuntu } from '../../public/fonts/fonts';
 import { FaStar } from "react-icons/fa";
+import toast from 'react-hot-toast';
 
 const Upcoming = () => {
 
@@ -32,6 +33,7 @@ const Upcoming = () => {
 
         } catch (error) {
             console.error("Error loading upcoming movies:", error);
+            toast.error("Error loading upcoming movies:");
 
         } finally {
             setLoading(false);

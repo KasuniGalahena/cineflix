@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import { listMovies } from '@/services/cineflix-api-services';
 import { inter, ubuntu } from '../../public/fonts/fonts';
 import { FaStar } from "react-icons/fa";
+import toast from 'react-hot-toast';
 
 const Latest = () => {
 
@@ -31,6 +32,7 @@ const Latest = () => {
 
         } catch (error) {
             console.error("Error loading latest movies:", error);
+            toast.error("Error loading latest movies:");
 
         } finally {
             setLoading(false);

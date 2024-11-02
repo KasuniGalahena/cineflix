@@ -7,6 +7,7 @@ import { inter, ubuntu } from '../../public/fonts/fonts';
 import { ListMovieParams, listMovies } from '@/services/cineflix-api-services';
 import { FaStar } from 'react-icons/fa6';
 import ReactPaginate from 'react-paginate';
+import toast from 'react-hot-toast';
 
 export default function Trending() {
 
@@ -39,6 +40,7 @@ export default function Trending() {
             setTotalMovies(response.data.data.movie_count);
         } catch (error) {
             console.error("Error loading trending movies:", error);
+            toast.error("Error loading trending movies");
         } finally {
             setLoading(false);
         }

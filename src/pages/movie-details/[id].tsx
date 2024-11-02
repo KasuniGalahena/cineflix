@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import YouTube from "react-youtube";
 import { FaHeart, FaStar } from "react-icons/fa6";
 import moment from "moment";
+import toast from "react-hot-toast";
 
 export default function MovieDetailsPage(props: any) {
 
@@ -34,6 +35,7 @@ export default function MovieDetailsPage(props: any) {
             setDetails(res.data.data.movie);
         } catch (error) {
             console.error("Error loading movie details:", error);
+            toast.error("Error loading movie details:");
         } finally {
             setLoading(false);
         }
@@ -48,6 +50,7 @@ export default function MovieDetailsPage(props: any) {
 
         } catch (error) {
             console.error("Error loading movie suggestions:", error);
+            toast.error("Error loading similar movies");
 
         } finally {
             setLoading(false);
