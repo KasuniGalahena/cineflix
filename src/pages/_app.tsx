@@ -8,11 +8,11 @@ export default function App({ Component, pageProps }: AppProps) {
       position="bottom-right"
       toastOptions={{
         style: {
-          border: '1px solid #d5d5d5',
-          borderRadius: '12px',
+          borderRadius: '50px',
+          background: '#333',
+          color: '#fff',
           padding: '15px',
           fontSize: '15px',
-          color: '#2a2a2a',
         },
       }}
     />
